@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>文件上传flash版</title>
+</head>
+<body>
+<input type="file" name="" id="upfile">
+<br>
+<br>
+<br>
+<br>
+<a href="http://www.uploadify.com/documentation/">官网文档说明</a>
+<script src="uploadify/jquery.uploadify.js"></script>
+<script>
+  /*
+   * name : Bear_Yiii (gitHub)
+   *
+   * CreatedDate : 2017-08-25
+   * */
+  var file = document.getElementById("file");
+
+  $("#upfile").uploadify({
+    height: 30,                          //点击区域高度
+    swf: './uploadify/uploadify.swf',  //插件必须有的依赖
+    uploader: 'https://www.baidu.com/uploader/avatar',               //上传路径
+    width: 120,                           //点击区域宽度
+    fileTypeExts: "*.jpg; *.png; *.gif",  //上传文件类型
+    fileObjName:"tc_avatar",              //ajax发送的文件名字(单个参数时可以只是用该属性,)
+    formData:{                            //上传需要的参数集
+      cg_id : ""
+    },
+    fileSizeLimit:"2MB",                  //上传文件最大值(KB默认,MB,GB)
+    buttonText:"",                        //点击区域文本
+    onUploadSuccess:function (file, data, response) {
+      //data 是后台返回的json字符串,一般需要通过JSON.parse()转成json对象
+      
+      //上传成功后执行的代码
+    
+    }
+    //其他方法参照官网文档
+  });
+</script>
+</body>
+</html>

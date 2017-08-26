@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>三级联动</title>
+</head>
+<body>
+<div class="col-md-5" id="settings_region">
+  <select id="tc_province" name="tc_province" data-id="{{tc_province}}" class="form-control input-sm">
+    <option value="">请选择省份</option>
+  </select>
+  <select id="tc_city" name="tc_city" data-id="{{tc_city}}" class="form-control input-sm">
+    <option value="">请选择市区</option>
+  </select>
+  <select id="tc_district" name="tc_district" data-id="{{tc_district}}" class="form-control input-sm">
+    <option value="">请选择县/地区</option>
+  </select>
+</div>
+<!--
+引入jquery文件
+引入region文件
+-->
+<script>
+  /*
+   * name : Bear_Yiii (gitHub)
+   *
+   * CreatedDate : 2017-08-25
+   * */
+   
+  
+  //三级联动省/市/区
+  $("#settings_region").region({
+    url:"/public/assets/jquery-region/region.json"
+  });
+  
+</script>
+</body>
+</html>

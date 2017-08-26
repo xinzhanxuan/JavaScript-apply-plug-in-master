@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>进度条</title>
+  <link rel="stylesheet" href="nprogress/nprogress.css">
+  <style>
+    div{
+      margin-top:50px;
+    }
+    input {
+      width: 100px;
+      height: 30px;
+      background-color: #ccc;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+    /*input:focus{*/
+      /*background-color: cyan;*/
+    /*}*/
+  </style>
+</head>
+<body>
+<div>
+  <input type="button" value="start" id="start">
+  <input type="button" value="set" id="set">
+  <input type="button" value="inc" id="inc">
+  <input type="button" value="done" id="done">
+  <br>
+  <br>
+  <br>
+  <br>
+  <a href="http://ricostacruz.com/nprogress/">NProgress.js官网</a>
+</div>
+
+
+<script src="nprogress/nprogress.js"></script>
+<script>
+ /*
+   * name : Bear_Yiii (gitHub)
+   *
+   * CreatedDate : 2017-08-25
+   * */
+ 
+  /*
+  *   NProgress -- 工具对象
+  *
+  *   NProgress.start() — 开始并显示进度条
+  *   NProgress.set(0.4) — 按百分比设置进度条
+  *   NProgress.inc() — 增加一点进度
+  *   NProgress.done() — 结束进度条
+  *
+  *   ☆start必须与done配合使用,进度条才会执行结束
+  * */
+
+  var start = document.getElementById("start");
+  var set = document.getElementById("set");
+  var inc = document.getElementById("inc");
+  var done = document.getElementById("done");
+
+  //开始
+  start.onclick = function () {
+    NProgress.start();
+  }
+  //设置
+  set.onclick = function () {
+    NProgress.set(0.4);
+  }
+  //增加
+  inc.onclick = function () {
+    NProgress.inc(0.1);
+  }
+  //结束
+  done.onclick = function () {
+    NProgress.done();
+  }
+
+ 
+
+ 
+  
+</script>
+</body>
+</html>
